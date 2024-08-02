@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare All - RHYNO EV</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* General Styling */
+      body {
+        font-family: "Lato", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #424242;
+        background-image: url(images/prebook.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background-color: #424242;
+        color: #fff225;
+        padding: 5px 0;
+      }
+      .logo img {
+        height: 50px;
+        width: 200px;
+        margin-left: -10px;
+      }
+      .menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu li {
+        padding: 0 10px;
+      }
+      .menu li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 15px;
+        display: block;
+      }
+      .menu a:hover,
+      .menu a:focus {
+        background-color: #4242425;
+        border-radius: -10px;
+      }
+
+      main.compare {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #373737(174, 240, 210, 0.8); /* Transparent background */
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      main.compare h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #414141;
+      }
+
+      .table-container {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #131313;
+        padding: 10px;
+        text-align: center;
+        background: #414141(255, 255, 255, 0.6); /* Transparent table cells */
+      }
+
+      table th {
+        background-color:#414141(
+          242,
+          242,
+          242,
+          0.8
+        ); /* Slightly less transparent for headers */
+      }
+
+      .book-now-button {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px 20px;
+        background-color: #f9ed32;
+        color: #202020;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .book-now-button:hover {
+        background-color: #fff225;
+      }
+
+      footer {
+        background: #252525;
+        color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      footer .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      footer .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 5px 10px;
+      }
+
+      footer .footer-links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="images/Copy of Copy of Logo with imagine initiate inspire.png"
+            alt="RHYNO Logo"
+          />
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+
+          <li class="dropdown">
+            <a href="javascript:void(0)">Products</a>
+            <div class="dropdown-content">
+              <a href="product1.html">SE03 Lite</a>
+              <a href="product2.html">SE03</a>
+              <a href="product3.html">SE03 Max</a>
+              <a href="compare.html">Compare All</a>
+            </div>
+          </li>
+
+          <li><a href="prebook.html">Pre-book Now</a></li>
+          <li><a href="https://www.instagram.com">Instagram</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="compare">
+      <h1>Compare All</h1>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Specification</th>
+              <th>SE03 Lite</th>
+              <th>SE03</th>
+              <th>SE03 Max</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Battery</td>
+              <td>1.8 kWh</td>
+              <td>2.7 kWh</td>
+              <td>2.7 kWh</td>
+            </tr>
+            <tr>
+              <td>Max Speed</td>
+              <td>55 km/h</td>
+              <td>55 km/h</td>
+              <td>65 km/h</td>
+            </tr>
+            <tr>
+              <td>Range</td>
+              <td>60 km</td>
+              <td>80 km</td>
+              <td>100 km</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>85 kg</td>
+              <td>95 kg</td>
+              <td>105 kg</td>
+            </tr>
+            <tr>
+              <td>Charging Time</td>
+              <td>4 hours</td>
+              <td>3.5 hours</td>
+              <td>3 hours</td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td>$1200</td>
+              <td>$1500</td>
+              <td>$1800</td>
+            </tr>
+            <tr>
+              <td>Warranty</td>
+              <td>2 years</td>
+              <td>3 years</td>
+              <td>3 years</td>
+            </tr>
+            <tr>
+              <td>Color Options</td>
+              <td>Red, Blue</td>
+              <td>Red, Blue, Black</td>
+              <td>Red, Blue, Black, White</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="prebook.html" class="book-now-button">Book Now</a>
+    </main>
+    <footer>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Website Policy</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="product1.html">Products</a>
+        <a href="https://www.linkedin.com">Career</a>
+        <a href="rentals.html">Rentals</a>
+        <a href="https://www.instagram.com">Instagram</a>
+        <a href="https://www.linkedin.com">LinkedIn</a>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
