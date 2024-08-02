@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pre-book Now - RHYNO EV</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Styling */
+      body {
+        font-family: "Lato", "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: url("images/prebook1.webp") no-repeat center center fixed;
+        background-size: cover;
+        color: #000000;
+        min-height: 1vh;
+      }
+
+      header {
+        background: #000000;
+        color: #ffffff;
+        padding: 5px 0;
+      }
+      .logo img {
+        height: 50px;
+        width: 200px;
+        margin-left: -10px;
+      }
+
+      /* Main Styling */
+      main.prebook {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background: rgba(70, 69, 88, 0.8); /* White background with opacity */
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      main.prebook h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #f5eeee;
+      }
+
+      main.prebook form {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main.prebook form label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #f4ebeb;
+      }
+
+      main.prebook form input,
+      main.prebook form select {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      main.prebook form button {
+        padding: 10px 20px;
+        background: #f9ed32;
+        color: #202020;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      main.prebook form button:hover {
+        background: #fff225;
+      }
+
+      .menu {
+        gap: 20px;
+      }
+      .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 15px;
+        display: block;
+        justify-content: space-between;
+      }
+      .menu a:hover,
+      .menu a:focus {
+        background-color: #555;
+        border-radius: -10px;
+      }
+      /* Footer Styling */
+      .footer-links {
+        background-color: #0a0a0a39;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        margin-top: auto; /* Push footer to the bottom */
+      }
+
+      .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* Popup Styling */
+      .popup {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        z-index: 1000;
+      }
+
+      .popup.active {
+        display: block;
+      }
+
+      .popup .popup-content {
+        margin-bottom: 20px;
+      }
+
+      .popup button {
+        padding: 10px 20px;
+        background: #f9ed32;
+        color: #202020;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .popup button:hover {
+        background: #fff225;
+      }
+
+      .popup-overlay {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      .popup-overlay.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="images/Copy of Copy of Logo with imagine initiate inspire.png"
+            alt="RHYNO Logo"
+          />
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)">Products</a>
+            <div class="dropdown-content">
+              <a href="product1.html">SE03 Lite</a>
+              <a href="product2.html">SE03</a>
+              <a href="product3.html">SE03 Max</a>
+              <a href="compare.html">Compare All</a>
+            </div>
+          </li>
+          <li><a href="prebook.html">Pre-book Now</a></li>
+          <li><a href="rentals.html">Rentals</a></li>
+          <li><a href="https://www.instagram.com">Instagram</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="prebook">
+      <h1>Pre-book Now</h1>
+      <form id="prebookForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <label for="model">Model:</label>
+        <select id="model" name="model">
+          <option value="se03lite">SE03 Lite</option>
+          <option value="se03">SE03</option>
+          <option value="se03max">SE03 Max</option>
+        </select>
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod">
+          <option value="card">Card</option>
+          <option value="cash">Cash</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <footer>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Website Policy</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="product1.html">Products</a>
+        <a href="https://www.linkedin.com">Career</a>
+        <a href="rentals.html">Rentals</a>
+        <a href="https://www.instagram.com">Instagram</a>
+        <a href="https://www.linkedin.com">LinkedIn</a>
+      </div>
+    </footer>
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popup">
+      <div class="popup-content" id="popupContent"></div>
+      <button id="popupButton">Close</button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("prebookForm");
+        const popupOverlay = document.getElementById("popupOverlay");
+        const popup = document.getElementById("popup");
+        const popupContent = document.getElementById("popupContent");
+        const popupButton = document.getElementById("popupButton");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const model = document.getElementById("model").value;
+          const paymentMethod = document.getElementById("paymentMethod").value;
+
+          if (!validateForm(name, email, phone)) {
+            showPopup("Please fill in all the required fields to book a bike.");
+            return;
+          }
+
+          processBooking(name, email, phone, model, paymentMethod);
+          form.reset();
+        });
+
+        popupButton.addEventListener("click", function () {
+          closePopup();
+        });
+
+        function validateForm(name, email, phone) {
+          const emailPattern =
+            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+          const phonePattern = /^[0-9]{10}$/;
+
+          if (name === "" || email === "" || phone === "") {
+            return false;
+          }
+          if (!emailPattern.test(email)) {
+            return false;
+          }
+          if (!phonePattern.test(phone)) {
+            return false;
+          }
+          return true;
+        }
+
+        function processBooking(name, email, phone, model, paymentMethod) {
+          let paymentMessage = "";
+          if (paymentMethod === "card") {
+            paymentMessage = "Card";
+          } else if (paymentMethod === "cash") {
+            paymentMessage = "Cash";
+          }
+          showPopup(
+            `Pre-book request submitted successfully for ${model}. Payment method: ${paymentMessage}`
+          );
+        }
+
+        function showPopup(message) {
+          popupContent.textContent = message;
+          popupOverlay.classList.add("active");
+          popup.classList.add("active");
+        }
+
+        popupOverlay.addEventListener("click", function () {
+          closePopup();
+        });
+
+        function closePopup() {
+          popupOverlay.classList.remove("active");
+          popup.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
