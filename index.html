@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - RHYNO EV</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Embedded CSS styles */
+      body {
+        font-family: "Lato", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        min-height: 1vh;
+        background-color: #ffffff;
+      }
+      header {
+        background-color: #080606;
+        color: #fff;
+        padding: 5px 0;
+      }
+      .logo img {
+        height: 50px;
+        width: 200px;
+        margin-left: -10px;}
+      .menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu li {
+        padding: 0 10px;
+      }
+      .menu li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 15px;
+        display: block;
+      }
+     .menu a:hover,
+      .menu a:focus {
+        background-color: #555;
+        border-radius: -10px;
+      }
+      
+      .hero {
+        text-align: center;
+        padding: 20px 2px;
+        overflow: hidden;
+        color: #fff;
+        position: relative;
+        
+      }
+      .parent {
+        position: relative;
+        max-width: 900px;
+        max-height: 800px;
+        margin: 0 auto;
+      }
+      .parent img {
+        height: auto;
+        width: 250%;
+        margin-left: -1000px;
+        object-fit: cover;
+        animation: zoomInOut 5s infinite;
+         
+      }
+
+      .parent .text {
+        text-align: center;
+      font: size 300px;;
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        /* animation: zoomInOut 5s infinite; */
+      }
+      .product-checkout {
+        text-align: center;
+        padding: 20px 20px;
+        background-color: transparent;
+        color: #0b0a0a;
+      }
+      .product-checkout .product-button {
+        display: inline-block;
+        margin: 10px;
+        padding: 15px 30px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        
+      }
+      .product-checkout .product-button:hover {
+        background-color: #110f0f;
+      }
+      .usp-container {
+        padding: 20px 0;
+        background-color: #070606;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .usp-container h2 {
+        margin-bottom: 20px;
+      }
+      .usp-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+      }
+      .usp-carousel .carousel-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+       animation-name: slide;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+      }
+      .usp-carousel .carousel-content p {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 20px;
+        margin: 0;
+      }
+      .pre-book-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #f0ad4e;
+        color: #333;
+        text-decoration: none;
+        border-radius: 5px;
+        z-index: 1000;
+        transition: background-color 0.3s;
+      }
+      .pre-book-button:hover {
+        background-color: #ec971f;
+      }
+      .footer-links {
+        background-color: #000000;
+        color: #fff;
+        padding: 5px 0;
+        text-align: center;
+      }
+      .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 5px;
+      }
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+      @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(200px);
+            }
+        }
+      @keyframes zoomInOut {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="images/Copy of Copy of Logo with imagine initiate inspire.png" alt="RHYNO Logo" />
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)">Products</a>
+            <div class="dropdown-content">
+              <a href="product1.html">SE03 Lite</a>
+              <a href="product2.html">SE03</a>
+              <a href="product3.html">SE03 Max</a>
+              <a href="compare.html">Compare All</a>
+            </div>
+          </li>
+          <li><a href="prebook.html">Pre-book Now</a></li>
+          <li><a href="rentals.html">Rentals</a></li>
+          <li><a href="https://www.instagram.com">Instagram</a></li>
+        </ul>
+      </nav>
+    </header>
+    <br>
+    <main>
+      <!-- Hero section -->
+      <section class="hero">
+        <div class="parent">
+          <img src="images/index.jpg" />
+          <div class="text">
+            <h1>
+              Let's Elevate Your Ride Experience With Rhyno – Where Superiority
+              Meets <span id="changing-word">Style</span>.
+            </h1>
+             <section class="product-checkout">
+          <a href="product1.html" class="product-button">Check SE03 Lite</a>
+          <a href="product2.html" class="product-button">Check SE03</a>
+          <a href="product3.html" class="product-button">Check SE03 Max</a>
+          </div>
+        </div>
+        <!-- Product Check Out Buttons section
+        <section class="product-checkout">
+          <a href="product1.html" class="product-button">Check SE03 Lite</a>
+          <a href="product2.html" class="product-button">Check SE03</a>
+          <a href="product3.html" class="product-button">Check SE03 Max</a>
+        </section> -->
+      </section>
+       <br><br>
+      <!-- Our USP (on rotating carousel) -->
+      <section class="usp-container">
+        <h2>Our USP</h2>
+        <div class="usp-carousel">
+          <div class="carousel-content">
+            <p>Long Battery Life</p>
+          </div>
+          <div class="carousel-content">
+            <p>High Performance</p>
+          </div>
+          <div class="carousel-content">
+            <p>Sleek Design</p>
+          </div>
+          <div class="carousel-content">
+            <p>Eco-Friendly</p>
+          </div>
+         
+        </div>
+        <!-- Pre-book button -->
+        <a href="prebook.html" class="pre-book-button">Pre-book Now</a>
+      </section>
+    </main>
+    <!-- Footer section -->
+    <footer>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Website Policy</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="product1.html">Products</a>
+        <a href="https://www.linkedin.com">Career</a>
+        <a href="rentals.html">Rentals</a>
+        <a href="https://www.instagram.com">Instagram</a>
+        <a href="https://www.linkedin.com">LinkedIn</a>
+      </div>
+    </footer>
+    <!-- JavaScript for any interactive functionality -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
